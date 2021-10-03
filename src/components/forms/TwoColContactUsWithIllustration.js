@@ -2,7 +2,6 @@ import React from 'react';
 import tw from 'twin.macro';
 import styled from 'styled-components';
 import { SectionHeading, Subheading as SubheadingBase } from 'components/misc/Headings.js';
-import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js';
 import EmailIllustrationSrc from 'images/Giftcard.png';
 import { PrimaryButton } from 'helpers/Buttons';
 

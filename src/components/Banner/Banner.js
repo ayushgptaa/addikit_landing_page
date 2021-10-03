@@ -1,7 +1,7 @@
 import React from 'react';
 import tw from 'twin.macro';
 import styled from 'styled-components';
-import { SectionHeading, Subheading as SubheadingBase } from 'components/misc/Headings.js';
+import { SectionHeading } from 'components/misc/Headings.js';
 import Birdimage from 'images/Bird.png';
 import logo from 'images/logo.png';
 import { PrimaryButton } from 'helpers/Buttons';
