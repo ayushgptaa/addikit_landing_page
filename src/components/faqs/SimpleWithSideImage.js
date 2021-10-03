@@ -3,28 +3,42 @@ import { motion } from 'framer-motion';
 import tw from 'twin.macro';
 import styled from 'styled-components';
 import { SectionHeading, Subheading as SubheadingBase } from 'components/misc/Headings.js';
-import { ReactComponent as PlusIcon } from 'feather-icons/dist/icons/plus.svg';
-import { ReactComponent as MinusIcon } from 'feather-icons/dist/icons/minus.svg';
+// import { ReactComponent as PlusIcon } from 'feather-icons/dist/icons/plus.svg';
+// import { ReactComponent as MinusIcon } from 'feather-icons/dist/icons/minus.svg';
+import Plus from 'images/Plus.svg';
+import Minus from 'images/Minus.svg';
 import Faqimage from '../../images/faq.png';
-
+const PlusIcon = () => {
+	return <img src={Plus} alt="plus" tw="w-4" />;
+};
+const MinusIcon = () => {
+	return <img src={Minus} alt="plus" tw="w-4" />;
+};
 const Container = tw.div`relative`;
-const Content = tw.div`w-full mx-auto py-16 lg:py-20  `;
-const TwoColumn = tw.div`flex justify-center gap-10 content-center`;
-const Image = tw.img` w-4/12 h-72 `;
+const Content = tw.div`w-full mx-auto py-16 lg:py-24  `;
+const TwoColumn = tw.div`flex justify-center md:flex-row flex-col items-end gap-10 content-center`;
+const Image = tw.img` lg:w-4/12 lg:h-72 w-10/12 mx-auto lg:mx-0`;
 const FAQContent = tw.div`max-w-lg`;
 const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left`;
-const Heading = tw(SectionHeading)`lg:text-left text-white text-3xl`;
-const FAQSContainer = tw.dl`mt-12 w-2/3`;
-const FAQ = tw.div`cursor-pointer mt-8 select-none  px-8 py-4 lg:p-0 rounded-lg lg:rounded-none`;
+const Heading = styled(SectionHeading)`
+	text-decoration: underline;
+	text-decoration-color: red;
+	${tw`lg:text-left text-white text-3xl `}
+`;
+const Heading2 = tw(SectionHeading)`lg:text-left hidden lg:block text-white text-3xl font-medium ml-64`;
+const FAQSContainer = tw.dl`lg:mt-12 lg:w-2/3 w-full`;
+const FAQ = tw.div`cursor-pointer lg:mt-8 select-none px-8 py-4 lg:p-0 rounded-lg lg:rounded-none`;
 const Question = tw.dt`flex items-center`;
 const QuestionText = tw.span`text-lg lg:text-sm font-semibold text-textlight pl-4`;
 const QuestionToggleIcon = styled.span`
-	${tw`ml-2 bg-primary-500 text-gray-100 p-1 rounded-full group-hover:bg-primary-700 group-hover:text-gray-200 transition duration-300 `}
+	${tw`ml-2 `}
 	svg {
 		${tw`w-4 h-4`}
 	}
 `;
-const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-textlight pl-4 `);
+const Answer = motion(
+	tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-textlight lg:pl-4 pl-10 w-10/12`
+);
 
 //eslint-disable-next-line
 export default ({ subheading = '', heading = 'FAQ', faqs = null }) => {
@@ -38,15 +52,23 @@ export default ({ subheading = '', heading = 'FAQ', faqs = null }) => {
 			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
-			question: 'Do you have 2 Bedroom suites ?',
+			question: 'How often do you update Addikt?',
 			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
-			question: 'Are Wi-Fi costs included in the price ?',
+			question: 'What is Addikt?',
 			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
-			question: 'Where can I reach you for support ?',
+			question: 'What countries does Addikt support?',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+		},
+		{
+			question: 'What stores do you support?',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
+		},
+		{
+			question: 'Does Addikt have renewals?',
 			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 	];
@@ -63,6 +85,7 @@ export default ({ subheading = '', heading = 'FAQ', faqs = null }) => {
 	return (
 		<Container>
 			<Content>
+				<Heading2>Frequently Asked Questions.</Heading2>
 				<TwoColumn>
 					<Image src={Faqimage} />
 					<FAQContent>

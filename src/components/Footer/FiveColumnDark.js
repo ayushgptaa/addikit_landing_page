@@ -16,7 +16,7 @@ const ColumnHeading = tw.h5`font-bold uppercase`;
 
 const LinkList = tw.ul`mt-4 text-sm font-medium`;
 const LinkListItem = tw.li`mt-3`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300`;
+const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-100 pb-1 transition duration-300 text-sm`;
 
 const LogoImg = tw.img`w-24 mx-auto md:mx-0`;
 

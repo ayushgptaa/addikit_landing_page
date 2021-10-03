@@ -1,6 +1,6 @@
 import tw from 'twin.macro';
 import styled from 'styled-components';
-import { Container } from 'components/misc/Layouts.js';
+import { Container, ContentWithPaddingXl } from 'components/misc/Layouts.js';
 import Monitors from '../../images/Monitors.png';
 import Monitorsicon from '../../images/Monitors.svg';
 import Tasks from '../../images/Tasks.png';
@@ -47,21 +47,23 @@ const plans = [
 //eslint-disable-next-line
 export default () => {
 	return (
-		<Container tw="py-10 md:py-0">
-			<PlansContainer>
-				{plans.map((plan, index) => (
-					<Plan key={index} featured={plan.featured}>
-						<PlanHeader>
-							<span className="iconcontainer">
-								<img className="icon" src={plan.icon} alt="" />
-								<span className="name">{plan.name}</span>
-							</span>
-							<span className="description">{plan.description}</span>
-							<img className="image" src={plan.image} alt="" />
-						</PlanHeader>
-					</Plan>
-				))}
-			</PlansContainer>
+		<Container>
+			<ContentWithPaddingXl>
+				<PlansContainer>
+					{plans.map((plan, index) => (
+						<Plan key={index} featured={plan.featured}>
+							<PlanHeader>
+								<span className="iconcontainer">
+									<img className="icon" src={plan.icon} alt="" />
+									<span className="name">{plan.name}</span>
+								</span>
+								<span className="description">{plan.description}</span>
+								<img className="image" src={plan.image} alt="" />
+							</PlanHeader>
+						</Plan>
+					))}
+				</PlansContainer>
+			</ContentWithPaddingXl>
 		</Container>
 	);
 };

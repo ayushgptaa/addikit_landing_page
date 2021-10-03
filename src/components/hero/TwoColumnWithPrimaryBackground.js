@@ -30,8 +30,10 @@ const TextColumn = tw.div`text-center mx-auto z-10`;
 const IllustrationColumn = tw(Column)`lg:mt-16 lg:mt-0 mx-auto lg:-mt-32 z-0 relative `;
 const Heading = tw(
 	SectionHeading
-)`max-w-3xl lg:max-w-xl lg:text-center leading-normal tracking-normal font-medium lg:text-3xl text-lg`;
-const Description = tw(SectionDescription)`mt-4 max-w-2xl lg:text-base mx-auto lg:mx-0 text-textlight font-medium`;
+)`max-w-3xl lg:max-w-xl lg:text-center leading-normal tracking-normal font-medium lg:text-3xl text-lg p-4 md:p-0`;
+const Description = tw(
+	SectionDescription
+)`lg:mt-4 max-w-2xl lg:text-base mx-auto lg:mx-0 text-textlight font-medium mt-0`;
 
 const Image = tw.img`w-full `;
 

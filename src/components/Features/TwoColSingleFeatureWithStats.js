@@ -8,7 +8,7 @@ const Container = styled.div`
 `;
 
 const TwoColumn = styled.div`
-	${tw`flex flex-col md:flex-row justify-evenly items-center max-w-screen-xl mx-auto lg:py-20  py-10 md:py-16 md:w-7/12`}
+	${tw`flex flex-col md:flex-row justify-evenly items-center max-w-screen-xl mx-auto lg:py-20  py-16 md:py-16 md:w-7/12`}
 `;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const Image = tw.img` md:w-6/12 w-10/12  `;
