@@ -19,12 +19,12 @@ const FAQ = tw.div`cursor-pointer mt-8 select-none  px-8 py-4 lg:p-0 rounded-lg 
 const Question = tw.dt`flex items-center`;
 const QuestionText = tw.span`text-lg lg:text-sm font-semibold text-textlight pl-4`;
 const QuestionToggleIcon = styled.span`
-	${tw`ml-2 bg-primary-500 text-gray-100 p-1 rounded-full group-hover:bg-primary-700 group-hover:text-gray-200 transition duration-300`}
+	${tw`ml-2 bg-primary-500 text-gray-100 p-1 rounded-full group-hover:bg-primary-700 group-hover:text-gray-200 transition duration-300 `}
 	svg {
 		${tw`w-4 h-4`}
 	}
 `;
-const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-textlight w-2/4`);
+const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-relaxed text-textlight pl-4 `);
 
 //eslint-disable-next-line
 export default ({ subheading = '', heading = 'FAQ', faqs = null }) => {
@@ -34,20 +34,20 @@ export default ({ subheading = '', heading = 'FAQ', faqs = null }) => {
 	 */
 	const defaultFaqs = [
 		{
-			question: 'Is lunch provided free of cost ?',
-			answer: 'Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system.',
+			question: 'Is the bot easy to set up?',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
 			question: 'Do you have 2 Bedroom suites ?',
-			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
 			question: 'Are Wi-Fi costs included in the price ?',
-			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 		{
 			question: 'Where can I reach you for support ?',
-			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+			answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
 		},
 	];
 

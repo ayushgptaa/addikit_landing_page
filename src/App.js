@@ -19,7 +19,7 @@ const style = {
 
 function App() {
 	return (
-		<AnimationRevealPage>
+		<AnimationRevealPage disabled>
 			<Hero />
 			<Features
 				bg="bg2"
