@@ -5,7 +5,9 @@ import Pricing from 'components/pricing/TwoPlansWithDurationSwitcher';
 import Features from 'components/Features/TwoColSingleFeatureWithStats';
 import Faqs from 'components/faqs/SimpleWithSideImage';
 import Form from 'components/forms/TwoColContactUsWithIllustration';
+import Banner from 'components/Banner/Banner';
 import AnimationRevealPage from 'helpers/AnimationRevealPage';
+import Footer from 'components/Footer/FiveColumnDark';
 import arrowright from './images/arrow-right-icon.svg';
 import clock from './images/clock-icon.svg';
 import Checkout from './images/Checkouts.png';
@@ -45,6 +47,8 @@ function App() {
 			/>
 			<Faqs />
 			<Form />
+			<Banner />
+			<Footer />
 		</AnimationRevealPage>
 	);
 }

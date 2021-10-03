@@ -2,11 +2,11 @@ import React from 'react';
 import tw from 'twin.macro';
 import styled from 'styled-components';
 import { SectionHeading, Subheading as SubheadingBase } from 'components/misc/Headings.js';
-import { PrimaryButton as PrimaryButtonBase } from 'components/misc/Buttons.js';
-import EmailIllustrationSrc from 'images/Giftcard.png';
+import Birdimage from 'images/Bird.png';
+import logo from 'images/logo.png';
 import { PrimaryButton } from 'helpers/Buttons';
 
-const Container = tw.div`relative bg-bg2`;
+const Container = tw.div`relative bg-main`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-center max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto`;
@@ -21,23 +21,16 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-center md:text-left `;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left font-light text-textlight`;
 const Heading = tw(
 	SectionHeading
-)`mt-4 text-white text-left text-3xl sm:text-4xl lg:text-4xl text-center md:text-left leading-tight`;
+)`mt-4 text-white text-left text-3xl sm:text-4xl lg:text-3xl text-center md:text-left leading-tight font-normal`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
-
-const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col lg:flex-row`;
-const Input = tw.input`border-2 px-5 py-2 rounded focus:outline-none font-medium transition duration-300 hocus:border-primary-500`;
-// const SubmitButton = tw(PrimaryButtonBase)`inline-block lg:ml-6 mt-6 lg:mt-0`;
+const Button = tw(PrimaryButton)` ml-0 text-sm`;
 
 //eslint-disable-next-line
 export default ({
-	subheading = 'Gift Cards are used as alternatives to credit cards in your profiles for processing payments.',
-	heading = 'Gift Cards',
-	description = 'Gift Card Groups allow you to organize your Gift Cards into folders.',
-	formAction = '#',
-	formMethod = 'get',
+	heading = 'The fastest, all-in-one bot.Supporting over 85 online retailers.',
+	description = 'Follow our Twitter to stay in the loop for the latest Noble updates and news.',
 	textOnLeft = true,
 }) => {
 	// The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
@@ -46,18 +39,14 @@ export default ({
 		<Container>
 			<TwoColumn>
 				<ImageColumn>
-					<Image imageSrc={EmailIllustrationSrc} />
+					<Image imageSrc={Birdimage} />
 				</ImageColumn>
 				<TextColumn textOnLeft={textOnLeft}>
 					<TextContent>
+						<img src={logo} alt="" />
 						<Heading>{heading}</Heading>
-						{subheading && <Subheading>{subheading}</Subheading>}
 						<Description>{description}</Description>
-						<Form action={formAction} method={formMethod}>
-							<Input type="email" name="email" placeholder="Your Email Address" />
-							{/* <SubmitButton type="submit">{submitButtonText}</SubmitButton> */}
-							<PrimaryButton>SEND</PrimaryButton>
-						</Form>
+						<Button>Follow on Twitter</Button>
 					</TextContent>
 				</TextColumn>
 			</TwoColumn>
